@@ -12,4 +12,3 @@ add_executable(matmul src/main.cpp src/NaiveMatMulBenchmark.cpp src/NaiveTiledMa
 
 # Link XNNPACK
 target_link_libraries(matmul)
-s
