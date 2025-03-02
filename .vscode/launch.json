@@ -1,0 +1,35 @@
+{
+    "version": "2.0.0",
+    "configurations": [
+        {
+            "name": "Debug on Raspberry Pi",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/matmul",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "CMake Build",
+            "pipeTransport": {
+                "pipeProgram": "ssh",
+                "pipeArgs": ["exynos@raspberrypi", "-T"],
+                "debuggerPath": "/usr/bin/gdb"
+            }
+        }
+    ]
+}
