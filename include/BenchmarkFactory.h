@@ -7,7 +7,11 @@
 
 class BenchmarkFactory {
 public:
-    virtual std::unique_ptr<MatMulBenchmark> createMatMulBenchmark() = 0;
+    enum class BenchmarkType {
+        NAIVE,
+        TILED
+    };
+    virtual std::unique_ptr<MatMulBenchmark> createMatMulBenchmark(BenchmarkType type) = 0;
     virtual ~BenchmarkFactory() {}
 };
 

@@ -8,7 +8,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 
 # Create executable
-add_executable(matmul src/main.cpp)
+add_executable(matmul src/main.cpp src/NaiveMatMulBenchmark.cpp src/NaiveTiledMatMulBenchmark.cpp)
 
 # Link XNNPACK
 target_link_libraries(matmul)
+s
