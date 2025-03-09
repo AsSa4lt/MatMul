@@ -14,6 +14,7 @@ include_directories(${EIGEN3_INCLUDE_DIR})
 add_executable(matmul src/main.cpp src/NaiveMatMulBenchmark.cpp 
                         src/NaiveTiledMatMulBenchmark.cpp 
                         src/SIMDNaiveMatMulBenchmark.cpp
+                        src/SIMDAccumulatorMatMulBenchmark
                         src/EigenMatMulBenchmark.cpp)
 
 # Link XNNPACK

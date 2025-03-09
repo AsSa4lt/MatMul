@@ -11,6 +11,7 @@ public:
         NAIVE,
         TILED,
         NAIVE_VECTOR_INSTRUCTION,
+        SIMD_ACCUMULATOR,
         EIGEN_DENSE
     };
     virtual std::unique_ptr<MatMulBenchmark> createMatMulBenchmark(BenchmarkType type) = 0;
